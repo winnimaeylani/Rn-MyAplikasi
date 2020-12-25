@@ -1,4 +1,4 @@
-import HomeScreen from './Home/Home.Screen';
-import DetailsScreen from './Details/Details.Screen';
+import HomeScreen from './Home/Home.screen.component';
+import DetailsScreen from './Details/Details.screen.component';
 
 export {HomeScreen, DetailsScreen};
