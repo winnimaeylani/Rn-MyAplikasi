@@ -8,16 +8,16 @@
 
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import RootNavigation from './src/Routes/Navigation';
+import RootNavigator from './src/Navigations/RootNavigator';
 import {AppStatusBar} from './src/Components';
-import {Colors} from './src/Themes/Colors';
+import {COLORS} from './src/Themes';
 import {Provider as StorePrivider} from 'react-redux'
 import {getStore} from './src/Redux/Store';
 
 const store = getStore();
 
 const App: () => React$Node = () => {
-  const APP_THEME = Colors.Blue;
+  const APP_THEME = COLORS.Blue;
   return (
         <SafeAreaView style={{flex: 1}}>
           <AppStatusBar backgroundColor={APP_THEME} barStyle="light-content" />

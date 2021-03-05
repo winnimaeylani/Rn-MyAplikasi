@@ -1,5 +1,16 @@
 // // @flow
+import {StyleSheet} from 'react-native';
+import {rf} from '../../Utils/Layout.util';
 
+const Styles = StyleSheet.create({
+    textSection: {
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      text: {
+        fontSize: rf(20),
+      },
+    });
 // import React, {useState} from 'react';
 // import {View, Text} from 'react-native';
 // import {NavigationProp} from '@react-navigation/native';

@@ -1,9 +1,10 @@
 //@flow 
 
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, TextInput, View, Button, TouchableWithoutFeedback} from 'react-native';
 import {Routes} from '../../Navigations/Routes';
 import {NavigationProp} from '@react-navigation/native';
+import {Styles} from './Detail.screen.style';
 
 type Props = {
     navigation: NavigationProp,
@@ -19,7 +20,7 @@ const DetailScreen = ({
     decreaseCount,
 }: Props) => {
     const initialState = {
-        name: 'Winni'
+        name: 'Winni',
         age: 20,
     };
     const [state, setState] = useState(initialState);
@@ -40,6 +41,14 @@ const DetailScreen = ({
                 style={{width: 200, height: 40, borderColor: 'blue', borderWidth: 1}}
                 value={count + ''}
             />
+                <View style={Styles.textSection}>
+                <Text
+                  onPress={() => increaseCount()}
+                  onLongPress={() => decreaseCount()}
+                  style={Styles.text}>
+                  {'count: ' + count}
+                </Text>
+              </View>
         </View>
     );
 };
